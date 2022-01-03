@@ -325,7 +325,7 @@ export default function Home() {
               <ul>
                 {winners.slice().reverse().map((winner, index) => (
                   <li key={index}>
-                    <span className="counter">#{lotteryNumber-index-1}</span>{" "}
+                    <span className="counter">#{lotteryNumber-index-1>0 ? lotteryNumber-index-1 : "N/A"}</span>{" "}
                     {" " + winner}
                   </li>
                 ))}
