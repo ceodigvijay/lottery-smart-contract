@@ -9,7 +9,6 @@ export default function Home() {
   const [web3, setWeb3] = useState(0);
   const [address, setAddress] = useState(null);
   const [lotteryNumber, setLotteryNumber] = useState(0);
-  const [lotteryNumber2, setLotteryNumber2] = useState(7);
   //Last index is the most recent winner
   const [winners, setWinners] = useState([0, 0, 0, 0, 0]);
   //Array of length = poolsize, 1 represent current user, -1 represent annonymous user
@@ -320,13 +319,13 @@ export default function Home() {
             />
           </svg>
           <div className={`dropdown-content ${showMenu ? "" : "hidden"}`}>
-            <div className="title">Lottery Number: {lotteryNumber2}</div>
+            <div className="title">Lottery Number: {lotteryNumber}</div>
             <div className="winners">
               <span className="title">Previous Winners:</span>
               <ul>
                 {winners.slice().reverse().map((winner, index) => (
                   <li key={index}>
-                    <span className="counter">#{lotteryNumber2-index-1}</span>{" "}
+                    <span className="counter">#{lotteryNumber-index-1}</span>{" "}
                     {" " + winner}
                   </li>
                 ))}
