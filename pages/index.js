@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
@@ -325,7 +324,7 @@ export default function Home() {
               <span className="title">Previous Winners:</span>
               <ul>
                 {winners.map((winner, index) => (
-                  <li>
+                  <li key={index}>
                     <span className="counter">#{lotteryNumber-index+2}</span>{" "}
                     {" " + winner}
                   </li>
